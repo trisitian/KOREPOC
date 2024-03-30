@@ -11,11 +11,29 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="104"
-  DTS:VersionGUID="{07F43E70-C977-41D6-AC8F-A0C8C1E61E4C}">
+  DTS:VersionBuild="138"
+  DTS:VersionGUID="{0EA1D7CD-95C3-4764-8D83-4BB1B9FFB1BB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Cache Connection Manager]"
+      DTS:CreationName="CACHE"
+      DTS:DTSID="{A0B79B19-7507-4834-B09F-1700635D0F86}"
+      DTS:ObjectName="Cache Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager>
+          <DTS:CacheColumns>
+            <DTS:CacheColumn
+              DTS:DataType="6"
+              DTS:IndexPosition="1"
+              DTS:ObjectName="Data Conversion 1.PurchaseTotal"
+              DTS:DTSID="{AC502DFE-D88C-418F-8B67-869BAAAA9D30}"
+              DTS:CreationName="" />
+          </DTS:CacheColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-NL7S15I.KorePOC]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
@@ -109,6 +127,152 @@
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{16EE53AD-1784-4D61-8126-E8A65F8EC8BD}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4105"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Unknown_Total.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Aggregate.PurchaseTotal"
+              DTS:DTSID="{B1446DBF-F55D-40E1-8913-AB0E5DC9BA2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1.PurchaseTotal"
+              DTS:DTSID="{C70911DA-B147-4CF7-A15F-46013C9CB15A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1.UserID"
+              DTS:DTSID="{BAAC0AAB-F887-4E16-BA76-F72814B48C79}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1.FullName"
+              DTS:DTSID="{C4031F15-93BE-48EB-AE3E-4A661B6B8F2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1.Age"
+              DTS:DTSID="{2AAB52F3-14F7-4BE7-BCBE-680E1506EBD7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1.Email"
+              DTS:DTSID="{1EC2DC3E-5A3E-46B1-97E9-A2FEA2834B93}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1.RegistrationDate"
+              DTS:DTSID="{D988FB9A-F3AA-48D3-B23D-DA9FE6FFEB4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Derived Column 1.LastLoginDate"
+              DTS:DTSID="{C0B88370-C224-42DA-BE81-7AD430628280}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion 1 1.UserID"
+              DTS:DTSID="{9BDD8859-83F8-4D83-B637-D6A53CE8F7AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion 1 1.FullName"
+              DTS:DTSID="{BE015B47-90E4-4504-9F12-A16EA7DB4386}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion 1 1.Age"
+              DTS:DTSID="{8B9D3609-A169-436B-80D8-AF19807520E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion 1 1.Email"
+              DTS:DTSID="{F254BDD0-8FB4-4CFE-9CF0-A4FB660B8BCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion 1 1.RegistrationDate"
+              DTS:DTSID="{597407AC-E06F-4FEB-A5E7-65991954AAAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion 1 1.LastLoginDate"
+              DTS:DTSID="{9012E172-B1D3-4DE3-B15D-01FA1ACD471D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Conversion 1 1.PurchaseTotal"
+              DTS:DTSID="{9EE3A94C-D720-476B-A63C-972AB0FF7D7B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
@@ -177,11 +341,13 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[UserID]"
-                      cachedDataType="numeric"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="UserID"
-                      cachedPrecision="18"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[UserID]"
-                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[UserID]" />
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[UserID]" />
                     <inputColumn
                       refId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[FullName]"
                       cachedCodepage="1252"
@@ -189,40 +355,47 @@
                       cachedLength="50"
                       cachedName="FullName"
                       externalMetadataColumnId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[FullName]"
-                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[FullName]" />
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[FullName]" />
                     <inputColumn
                       refId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Age]"
-                      cachedDataType="numeric"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="Age"
-                      cachedPrecision="18"
                       externalMetadataColumnId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Age]"
-                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[Age]" />
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[Age]" />
                     <inputColumn
                       refId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="Email"
                       externalMetadataColumnId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Email]"
-                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[Email]" />
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[Email]" />
                     <inputColumn
                       refId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[RegistrationDate]"
-                      cachedDataType="date"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="RegistrationDate"
                       externalMetadataColumnId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[RegistrationDate]"
-                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[RegistrationDate]" />
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[RegistrationDate]" />
                     <inputColumn
                       refId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[LastLoginDate]"
-                      cachedDataType="date"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="LastLoginDate"
                       externalMetadataColumnId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[LastLoginDate]"
-                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[LastLoginDate]" />
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[LastLoginDate]" />
                     <inputColumn
                       refId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PurchaseTotal]"
-                      cachedDataType="cy"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
                       cachedName="PurchaseTotal"
                       externalMetadataColumnId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[PurchaseTotal]"
-                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[PurchaseTotal]" />
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[PurchaseTotal]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -287,44 +460,180 @@
               </outputs>
             </component>
             <component
-              refId="Package\LoadData\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
+              refId="Package\LoadData\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
               <inputs>
                 <input
-                  refId="Package\LoadData\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
+                  refId="Package\LoadData\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoadData\Aggregate.Inputs[Aggregate Input 1].Columns[PurchaseTotal]"
+                      cachedDataType="cy"
+                      cachedName="PurchaseTotal"
+                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[PurchaseTotal]" />
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\LoadData\Data Conversion.Outputs[Data Conversion Output]"
+                  refId="Package\LoadData\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoadData\Aggregate.Outputs[Aggregate Output 1].Columns[PurchaseTotal]"
+                      dataType="cy"
+                      lineageId="Package\LoadData\Aggregate.Outputs[Aggregate Output 1].Columns[PurchaseTotal]"
+                      name="PurchaseTotal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[PurchaseTotal]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\LoadData\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\LoadData\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoadData\Conditional Split.Inputs[Conditional Split Input].Columns[UserID]"
+                      cachedDataType="numeric"
+                      cachedName="UserID"
+                      cachedPrecision="18"
+                      lineageId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[UserID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoadData\Conditional Split.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\LoadData\Data Conversion.Inputs[Data Conversion Input]">
+                  name="Case 1"
+                  synchronousInputId="Package\LoadData\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output].Columns[UserID]} == 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">[Data Conversion 1].UserID == 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\LoadData\Data Conversion.Outputs[Data Conversion Error Output]"
+                  refId="Package\LoadData\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\LoadData\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\LoadData\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\LoadData\Data Conversion.Inputs[Data Conversion Input]">
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\LoadData\Conditional Split.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\LoadData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\LoadData\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\LoadData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\LoadData\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\LoadData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\LoadData\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\LoadData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\LoadData\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -578,6 +887,239 @@
               </outputs>
             </component>
             <component
+              refId="Package\LoadData\Data Conversion 1 1"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion 1 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input].Columns[UserID]"
+                      cachedDataType="i4"
+                      cachedName="UserID"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[UserID]" />
+                    <inputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input].Columns[FullName]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="FullName"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[FullName]" />
+                    <inputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input].Columns[Age]"
+                      cachedDataType="i4"
+                      cachedName="Age"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Email"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input].Columns[RegistrationDate]"
+                      cachedDataType="i4"
+                      cachedName="RegistrationDate"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[RegistrationDate]" />
+                    <inputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input].Columns[LastLoginDate]"
+                      cachedDataType="i4"
+                      cachedName="LastLoginDate"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[LastLoginDate]" />
+                    <inputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input].Columns[PurchaseTotal]"
+                      cachedDataType="cy"
+                      cachedName="PurchaseTotal"
+                      lineageId="Package\LoadData\Aggregate.Outputs[Aggregate Output 1].Columns[PurchaseTotal]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[UserID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[UserID]"
+                      name="UserID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[UserID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[FullName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[FullName]"
+                      name="FullName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[FullName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[Age]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[Age]"
+                      name="Age"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Age]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Email]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[RegistrationDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[RegistrationDate]"
+                      name="RegistrationDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[RegistrationDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[LastLoginDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[LastLoginDate]"
+                      name="LastLoginDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[LastLoginDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[PurchaseTotal]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[PurchaseTotal]"
+                      name="PurchaseTotal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\LoadData\Aggregate.Outputs[Aggregate Output 1].Columns[PurchaseTotal]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\LoadData\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -802,6 +1344,429 @@
                   <externalMetadataColumns />
                 </output>
               </outputs>
+            </component>
+            <component
+              refId="Package\LoadData\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\LoadData\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoadData\Derived Column 1.Inputs[Derived Column Input].Columns[PurchaseTotal]"
+                      cachedDataType="cy"
+                      cachedName="PurchaseTotal"
+                      lineageId="Package\LoadData\Aggregate.Outputs[Aggregate Output 1].Columns[PurchaseTotal]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\LoadData\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[PurchaseTotal]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[PurchaseTotal]"
+                      name="PurchaseTotal"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\LoadData\Aggregate.Outputs[Aggregate Output 1].Columns[PurchaseTotal]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">PurchaseTotal</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[UserID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[UserID]"
+                      name="UserID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[FullName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[FullName]"
+                      name="FullName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"\"Null USER\""</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"\"Null USER\""</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Age]"
+                      name="Age"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">18</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">18</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"\"UnknowEmail@me.com\""</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"\"UnknowEmail@me.com\""</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[RegistrationDate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[RegistrationDate]"
+                      name="RegistrationDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1900 - 01 - 01</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1900 - 01 - 01</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[LastLoginDate]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[LastLoginDate]"
+                      name="LastLoginDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1900 - 01 - 01</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1900 - 01 - 01</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\LoadData\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LoadData\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\LoadData\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="4105"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\LoadData\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[PurchaseTotal]"
+                      cachedDataType="cy"
+                      cachedName="PurchaseTotal"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Aggregate.PurchaseTotal]"
+                      lineageId="Package\LoadData\Aggregate.Outputs[Aggregate Output 1].Columns[PurchaseTotal]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[PurchaseTotal1]"
+                      cachedDataType="cy"
+                      cachedName="PurchaseTotal"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.PurchaseTotal]"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[PurchaseTotal]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[UserID]"
+                      cachedDataType="i4"
+                      cachedName="UserID"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.UserID]"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[UserID]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[FullName]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="FullName"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.FullName]"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[FullName]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[Age]"
+                      cachedDataType="i4"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.Age]"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.Email]"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[RegistrationDate]"
+                      cachedDataType="i4"
+                      cachedName="RegistrationDate"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.RegistrationDate]"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[RegistrationDate]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[LastLoginDate]"
+                      cachedDataType="i4"
+                      cachedName="LastLoginDate"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.LastLoginDate]"
+                      lineageId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output].Columns[LastLoginDate]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[UserID1]"
+                      cachedDataType="numeric"
+                      cachedName="UserID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.UserID]"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[UserID]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[FullName1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FullName"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.FullName]"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[FullName]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[Age1]"
+                      cachedDataType="numeric"
+                      cachedName="Age"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.Age]"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[Email1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.Email]"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[RegistrationDate1]"
+                      cachedDataType="date"
+                      cachedName="RegistrationDate"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.RegistrationDate]"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[RegistrationDate]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[LastLoginDate1]"
+                      cachedDataType="date"
+                      cachedName="LastLoginDate"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.LastLoginDate]"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[LastLoginDate]" />
+                    <inputColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].Columns[PurchaseTotal2]"
+                      cachedDataType="cy"
+                      cachedName="PurchaseTotal"
+                      externalMetadataColumnId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.PurchaseTotal]"
+                      lineageId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output].Columns[PurchaseTotal]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Aggregate.PurchaseTotal]"
+                      dataType="cy"
+                      name="Aggregate.PurchaseTotal" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.PurchaseTotal]"
+                      dataType="cy"
+                      name="Derived Column 1.PurchaseTotal" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.UserID]"
+                      dataType="i4"
+                      name="Derived Column 1.UserID" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.FullName]"
+                      dataType="wstr"
+                      length="11"
+                      name="Derived Column 1.FullName" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.Age]"
+                      dataType="i4"
+                      name="Derived Column 1.Age" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.Email]"
+                      dataType="wstr"
+                      length="20"
+                      name="Derived Column 1.Email" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.RegistrationDate]"
+                      dataType="i4"
+                      name="Derived Column 1.RegistrationDate" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Derived Column 1.LastLoginDate]"
+                      dataType="i4"
+                      name="Derived Column 1.LastLoginDate" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.UserID]"
+                      dataType="numeric"
+                      name="Data Conversion 1 1.UserID"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.FullName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Data Conversion 1 1.FullName" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.Age]"
+                      dataType="numeric"
+                      name="Data Conversion 1 1.Age"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Data Conversion 1 1.Email" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.RegistrationDate]"
+                      dataType="date"
+                      name="Data Conversion 1 1.RegistrationDate" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.LastLoginDate]"
+                      dataType="date"
+                      name="Data Conversion 1 1.LastLoginDate" />
+                    <externalMetadataColumn
+                      refId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Data Conversion 1 1.PurchaseTotal]"
+                      dataType="cy"
+                      name="Data Conversion 1 1.PurchaseTotal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
             </component>
             <component
               refId="Package\LoadData\Flat File Source"
@@ -1064,23 +2029,323 @@
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\LoadData\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\LoadData\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\LoadData\Sort.Inputs[Sort Input].Columns[UserID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UserID"
+                      lineageId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\LoadData\Sort.Inputs[Sort Input].Columns[FullName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FullName"
+                      lineageId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[FullName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\LoadData\Sort.Inputs[Sort Input].Columns[Age]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Age"
+                      lineageId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[Age]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\LoadData\Sort.Inputs[Sort Input].Columns[Email]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Email"
+                      lineageId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[Email]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\LoadData\Sort.Inputs[Sort Input].Columns[RegistrationDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="RegistrationDate"
+                      lineageId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[RegistrationDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\LoadData\Sort.Inputs[Sort Input].Columns[LastLoginDate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LastLoginDate"
+                      lineageId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[LastLoginDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\LoadData\Sort.Inputs[Sort Input].Columns[PurchaseTotal]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PurchaseTotal"
+                      lineageId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[PurchaseTotal]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LoadData\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LoadData\Sort.Outputs[Sort Output].Columns[UserID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[UserID]"
+                      name="UserID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[UserID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Sort.Outputs[Sort Output].Columns[FullName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[FullName]"
+                      name="FullName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[FullName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Sort.Outputs[Sort Output].Columns[Age]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[Age]"
+                      name="Age">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[Age]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Sort.Outputs[Sort Output].Columns[Email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[Email]"
+                      name="Email">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[Email]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Sort.Outputs[Sort Output].Columns[RegistrationDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[RegistrationDate]"
+                      name="RegistrationDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[RegistrationDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Sort.Outputs[Sort Output].Columns[LastLoginDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[LastLoginDate]"
+                      name="LastLoginDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[LastLoginDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\LoadData\Sort.Outputs[Sort Output].Columns[PurchaseTotal]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\LoadData\Sort.Outputs[Sort Output].Columns[PurchaseTotal]"
+                      name="PurchaseTotal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\LoadData\Flat File Source.Outputs[Flat File Source Output].Columns[PurchaseTotal]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
+              refId="Package\LoadData.Paths[Aggregate Output 1]"
+              endId="Package\LoadData\Derived Column 1.Inputs[Derived Column Input]"
+              name="Aggregate Output 1"
+              startId="Package\LoadData\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\LoadData.Paths[Case 1]"
+              endId="Package\LoadData\Aggregate.Inputs[Aggregate Input 1]"
+              name="Case 1"
+              startId="Package\LoadData\Conditional Split.Outputs[Case 1]" />
+            <path
+              refId="Package\LoadData.Paths[Conditional Split Default Output]"
+              endId="Package\LoadData\Sort.Inputs[Sort Input]"
+              name="Conditional Split Default Output"
+              startId="Package\LoadData\Conditional Split.Outputs[Conditional Split Default Output]" />
+            <path
               refId="Package\LoadData.Paths[Data Conversion Output]"
-              endId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              endId="Package\LoadData\Conditional Split.Inputs[Conditional Split Input]"
               name="Data Conversion Output"
               startId="Package\LoadData\Data Conversion 1.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\LoadData.Paths[Data Conversion Output1]"
+              endId="Package\LoadData\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\LoadData\Data Conversion 1 1.Outputs[Data Conversion Output]" />
             <path
               refId="Package\LoadData.Paths[Derived Column Output]"
               endId="Package\LoadData\Data Conversion 1.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\LoadData\Derived Column.Outputs[Derived Column Output]" />
             <path
+              refId="Package\LoadData.Paths[Derived Column Output1]"
+              endId="Package\LoadData\Data Conversion 1 1.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\LoadData\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
               refId="Package\LoadData.Paths[Flat File Source Output]"
               endId="Package\LoadData\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\LoadData\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\LoadData.Paths[Sort Output]"
+              endId="Package\LoadData\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="Sort Output"
+              startId="Package\LoadData\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1109,49 +2374,61 @@
     design-time-name="Package\LoadData">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="186,42"
-          Id="Package\LoadData\ADO NET Destination"
-          TopLeft="538,412" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,63"
           Id="Package\LoadData\Flat File Source"
-          TopLeft="557,54" />
+          TopLeft="388,0" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\LoadData\Data Conversion"
-          TopLeft="5.5,5.5" />
+          Size="130,42"
+          Id="Package\LoadData\Aggregate"
+          TopLeft="1066,341" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\LoadData\Conditional Split"
+          TopLeft="715,258" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\LoadData\Data Conversion 1"
+          TopLeft="418,194" />
+        <NodeLayout
+          Size="99,42"
+          Id="Package\LoadData\Sort"
+          TopLeft="479,366" />
         <NodeLayout
           Size="158,42"
           Id="Package\LoadData\Derived Column"
-          TopLeft="760,223" />
+          TopLeft="586,94" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\LoadData\ADO NET Destination"
+          TopLeft="186,352" />
         <EdgeLayout
           Id="Package\LoadData.Paths[Flat File Source Output]"
-          TopLeft="635,117">
+          TopLeft="466,63">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="204,106"
+              EndConnector="199,31"
               Start="0,0"
-              End="204,98.5">
+              End="199,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49" />
+                    End="0,11.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,49"
-                    Point2="0,53"
-                    Point3="4,53" />
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
                   <mssgle:LineSegment
-                    End="200,53" />
+                    End="195,15.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="200,53"
-                    Point2="204,53"
-                    Point3="204,57" />
+                    Point1="195,15.5"
+                    Point2="199,15.5"
+                    Point3="199,19.5" />
                   <mssgle:LineSegment
-                    End="204,98.5" />
+                    End="199,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1160,36 +2437,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170,42"
-          Id="Package\LoadData\Data Conversion 1"
-          TopLeft="991,287" />
         <EdgeLayout
           Id="Package\LoadData.Paths[Derived Column Output]"
-          TopLeft="918,244">
+          TopLeft="665,136">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="73,64"
+              EndConnector="-162,58"
               Start="0,0"
-              End="65.5,64">
+              End="-162,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="32.5,0" />
+                    End="0,25" />
                   <mssgle:CubicBezierSegment
-                    Point1="32.5,0"
-                    Point2="36.5,0"
-                    Point3="36.5,4" />
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
                   <mssgle:LineSegment
-                    End="36.5,60" />
+                    End="-158,29" />
                   <mssgle:CubicBezierSegment
-                    Point1="36.5,60"
-                    Point2="36.5,64"
-                    Point3="40.5,64" />
+                    Point1="-158,29"
+                    Point2="-162,29"
+                    Point3="-162,33" />
                   <mssgle:LineSegment
-                    End="65.5,64" />
+                    End="-162,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1200,38 +2473,256 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\LoadData.Paths[Data Conversion Output]"
-          TopLeft="1076,329">
+          TopLeft="588,215">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-445,83"
+              EndConnector="127,64"
               Start="0,0"
-              End="-445,75.5">
+              End="119.5,64">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5" />
+                    End="59.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.5"
-                    Point2="0,41.5"
-                    Point3="-4,41.5" />
+                    Point1="59.5,0"
+                    Point2="63.5,0"
+                    Point3="63.5,4" />
                   <mssgle:LineSegment
-                    End="-441,41.5" />
+                    End="63.5,60" />
                   <mssgle:CubicBezierSegment
-                    Point1="-441,41.5"
-                    Point2="-445,41.5"
-                    Point3="-445,45.5" />
+                    Point1="63.5,60"
+                    Point2="63.5,64"
+                    Point3="67.5,64" />
                   <mssgle:LineSegment
-                    End="-445,75.5" />
+                    End="119.5,64" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LoadData.Paths[Case 1]"
+          TopLeft="794.5,300">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="336.5,41"
+              Start="0,0"
+              End="336.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="332.5,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="332.5,20.5"
+                    Point2="336.5,20.5"
+                    Point3="336.5,24.5" />
+                  <mssgle:LineSegment
+                    End="336.5,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-230.5,46.5,16,16"
+              BoundingBox="153.0319140625,25.5,30.436171875,9.5537109375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LoadData.Paths[Sort Output]"
+          TopLeft="479,387">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-107,-14"
+              Start="0,0"
+              End="-99.5,-14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-49.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-49.5,0"
+                    Point2="-53.5,0"
+                    Point3="-53.5,-4" />
+                  <mssgle:LineSegment
+                    End="-53.5,-10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-53.5,-10"
+                    Point2="-53.5,-14"
+                    Point3="-57.5,-14" />
+                  <mssgle:LineSegment
+                    End="-99.5,-14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\LoadData\Derived Column 1"
+          TopLeft="1100,424" />
+        <EdgeLayout
+          Id="Package\LoadData.Paths[Aggregate Output 1]"
+          TopLeft="1131,383">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.5,41"
+              Start="0,0"
+              End="52.5,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="4,20.5" />
+                  <mssgle:LineSegment
+                    End="48.5,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.5,20.5"
+                    Point2="52.5,20.5"
+                    Point3="52.5,24.5" />
+                  <mssgle:LineSegment
+                    End="52.5,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170,42"
+          Id="Package\LoadData\Data Conversion 1 1"
+          TopLeft="746,471" />
+        <EdgeLayout
+          Id="Package\LoadData.Paths[Derived Column Output1]"
+          TopLeft="1100,445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-184,47"
+              Start="0,0"
+              End="-176.5,47">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-88,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-88,0"
+                    Point2="-92,0"
+                    Point3="-92,4" />
+                  <mssgle:LineSegment
+                    End="-92,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-92,43"
+                    Point2="-92,47"
+                    Point3="-96,47" />
+                  <mssgle:LineSegment
+                    End="-176.5,47" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LoadData.Paths[Conditional Split Default Output]"
+          TopLeft="769.333333333333,300">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-240.833333333333,66"
+              Start="0,0"
+              End="-240.833333333333,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.7945205479452" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.7945205479452"
+                    Point2="0,26.7945205479452"
+                    Point3="-4,26.7945205479452" />
+                  <mssgle:LineSegment
+                    End="-236.833333333333,26.7945205479452" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-236.833333333333,26.7945205479452"
+                    Point2="-240.833333333333,26.7945205479452"
+                    Point3="-240.833333333333,30.7945205479452" />
+                  <mssgle:LineSegment
+                    End="-240.833333333333,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-191.030572916667,31.7945205479452,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\LoadData\Flat File Destination"
+          TopLeft="433,457" />
+        <EdgeLayout
+          Id="Package\LoadData.Paths[Data Conversion Output1]"
+          TopLeft="746,492">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-137,-14"
+              Start="0,0"
+              End="-129.5,-14">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-64.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-64.5,0"
+                    Point2="-68.5,0"
+                    Point3="-68.5,-4" />
+                  <mssgle:LineSegment
+                    End="-68.5,-10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-68.5,-10"
+                    Point2="-68.5,-14"
+                    Point3="-72.5,-14" />
+                  <mssgle:LineSegment
+                    End="-129.5,-14" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
